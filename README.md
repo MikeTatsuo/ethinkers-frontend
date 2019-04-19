@@ -1,68 +1,101 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo of the project](./images/logo.sample.png)
 
-## Available Scripts
+# Name of the project &middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
+> Additional information or tag line
 
-In the project directory, you can run:
+A brief description of your project, what it is used for.
 
-### `npm start`
+## Installing / Getting started
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A quick introduction of the minimal setup you need to get a hello world up &
+running.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+```shell
+commands here
+```
 
-### `npm test`
+Here you should say what actually happens when you execute the code above.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Developing
 
-### `npm run build`
+### Built With
+List main libraries, frameworks used including versions (React, Angular etc...)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+What is needed to set up the dev environment. For instance, global dependencies or any other tools. include download links.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Setting up Dev
 
-### `npm run eject`
+Here's a brief intro about what a developer must do in order to start developing
+the project further:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```shell
+git clone https://github.com/your/your-project.git
+cd your-project/
+packagemanager install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+And state what happens step-by-step. If there is any virtual environment, local server or database feeder needed, explain here.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Building
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If your project needs some additional steps for the developer to build the
+project after some code changes, state them here. for example:
 
-## Learn More
+```shell
+./configure
+make
+make install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Here again you should state what actually happens when the code above gets
+executed.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Deploying / Publishing
+give instructions on how to build and release a new version
+In case there's some step you have to take that publishes this project to a
+server, this is the right time to state it.
 
-### Code Splitting
+```shell
+packagemanager deploy your-project -s server.com -u username -p password
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+And again you'd need to tell what the previous code actually does.
 
-### Analyzing the Bundle Size
+## Versioning
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+We can maybe use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Configuration
 
-### Advanced Configuration
+Here you should write what are all of the configurations a user can enter when
+using the project.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Tests
 
-### Deployment
+Describe and show how to run the tests with code examples.
+Explain what these tests test and why.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```shell
+Give an example
+```
 
-### `npm run build` fails to minify
+## Style guide
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Explain your code style and show how to check it.
+
+## Api Reference
+
+If the api is external, link to api documentation. If not describe your api including authentication methods as well as explaining all the endpoints with their required parameters.
+
+
+## Database
+
+Explaining what database (and version) has been used. Provide download links.
+Documents your database design and schemas, relations etc...
+
+## Licensing
+
+State what the license is and how to find the text version of the license.
