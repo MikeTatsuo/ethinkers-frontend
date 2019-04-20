@@ -2,8 +2,11 @@
   "name": "ethinkers-frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://MikeTatsuo.github.io/ethinkers-frontend",
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
+    "dexie": "^2.0.4",
     "history": "^4.9.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
@@ -13,9 +16,12 @@
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

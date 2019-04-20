@@ -12,12 +12,4 @@ class SubmitButton extends Component {
   }
 }
 
-const mapStateToProps = () => {
-
-}
-
-const mapActionToProps = {
-
-}
-
-export default connect(mapStateToProps, mapActionToProps)(SubmitButton);
+export default connect()(SubmitButton);
