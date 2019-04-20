@@ -2,7 +2,7 @@ import { ADD_USER, GET_USERS, EDIT_USER, DELETE_USER, LOAD_USERS } from '../acti
 
 const initialState = [{
 	id: 0,
-	name: "",
+	firstname: "",
 	lastname: "",
 	cpf: "",
 	phone: "",
@@ -12,7 +12,6 @@ const initialState = [{
 }]
 
 export const users = (state = initialState, { type, payload }) => {
-	debugger
 	switch (type) {
 		case ADD_USER:
 			return payload;
