@@ -1,101 +1,44 @@
-![Logo of the project](./images/logo.sample.png)
 
-# Name of the project &middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
-> Additional information or tag line
+# e-Thinkers - Front-End - Teste &middot;
 
-A brief description of your project, what it is used for.
+## Instalação
 
-## Installing / Getting started
+Baixar o projeto usando git clone ou baixando diretamente o arquivo ```.zip```
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
-
+Comando do git clone
 ```shell
-commands here
+git clone https://github.com/MikeTatsuo/ethinkers-frontend
 ```
 
-Here you should say what actually happens when you execute the code above.
+Ele irá baixar os arquivos do projeto em uma pasta com o mesmo nome.
 
-## Developing
-
-### Built With
-List main libraries, frameworks used including versions (React, Angular etc...)
-
-### Prerequisites
-What is needed to set up the dev environment. For instance, global dependencies or any other tools. include download links.
-
-
-### Setting up Dev
-
-Here's a brief intro about what a developer must do in order to start developing
-the project further:
+Entrar dentro da pasta.
 
 ```shell
-git clone https://github.com/your/your-project.git
-cd your-project/
-packagemanager install
+cd ./ethinkers-frontend
 ```
 
-And state what happens step-by-step. If there is any virtual environment, local server or database feeder needed, explain here.
-
-### Building
-
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here. for example:
-
+E para construir o projeto executar o comando
 ```shell
-./configure
-make
-make install
+npm install
 ```
 
-Here again you should state what actually happens when the code above gets
-executed.
-
-### Deploying / Publishing
-give instructions on how to build and release a new version
-In case there's some step you have to take that publishes this project to a
-server, this is the right time to state it.
-
+E para executar o projeto localmente
 ```shell
-packagemanager deploy your-project -s server.com -u username -p password
+npm start
 ```
 
-And again you'd need to tell what the previous code actually does.
-
-## Versioning
-
-We can maybe use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
-
-
-## Configuration
-
-Here you should write what are all of the configurations a user can enter when
-using the project.
-
-## Tests
-
-Describe and show how to run the tests with code examples.
-Explain what these tests test and why.
-
+ou para criar uma versão de produção
 ```shell
-Give an example
+npm run build
 ```
 
-## Style guide
 
-Explain your code style and show how to check it.
+## Desenvolvimento
 
-## Api Reference
+### O que foi utilizado
+Utilizei o React 16.8.6, Redux 4.0.1 e React-Router 5.0 basicamente, com Booststrap 4.3 e Fontawesome , para comunicação com a API foi utilizado o axios 0.18 e para o local storage o Dexie.js 2.0 para acessar o banco de dados IndexedDB, o gh-pages para fazer o deploy no GitHub Pages.
 
-If the api is external, link to api documentation. If not describe your api including authentication methods as well as explaining all the endpoints with their required parameters.
+### O que ficou faltando
 
-
-## Database
-
-Explaining what database (and version) has been used. Provide download links.
-Documents your database design and schemas, relations etc...
-
-## Licensing
-
-State what the license is and how to find the text version of the license.
+A funcionalidade de edição, testes unitários e melhoria no design para ficar "perfect pixel"

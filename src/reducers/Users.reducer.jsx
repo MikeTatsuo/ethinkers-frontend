@@ -1,4 +1,4 @@
-import { ADD_USER, GET_USERS, EDIT_USER, DELETE_USER, LOAD_USERS } from '../actions/ActionTypes'
+import { ADD_USER, EDIT_USER, DELETE_USER, LOAD_USERS } from '../actions/ActionTypes'
 
 const initialState = [{
 	id: 0,
@@ -6,16 +6,12 @@ const initialState = [{
 	lastname: "",
 	cpf: "",
 	phone: "",
-	email: "",
-	edit: false,
-	del: false
+	email: ""
 }]
 
 export const users = (state = initialState, { type, payload }) => {
 	switch (type) {
 		case ADD_USER:
-			return payload;
-		case GET_USERS:
 			return payload;
 		case EDIT_USER:
 			return payload;

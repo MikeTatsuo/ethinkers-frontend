@@ -5,10 +5,19 @@ import UserProvider from "../providers/Users.provider"
 const userProvider = new UserProvider();
 
 export const addUser = (data) => {
-	return ({
-		type: ADD_USER,
-		payload: data
-	})
+	return function asyncAdd(dispatch) {
+		delete data.terms;
+		addUserToIndexedDb(data)
+			.then(() => {
+				getUsersFromIndexedDb()
+					.then(users => {
+						dispatch({
+							type: ADD_USER,
+							payload: users
+						})
+					}).catch(error => console.error(error))
+			}).catch(error => console.error(error))
+	}
 }
 
 export const editUser = (data) => {
@@ -31,12 +40,6 @@ export const deleteUser = (id) => {
 					}).catch(error => console.error(error))
 			}).catch(error => console.error(error))
 	}
-}
-
-export const getUsers = () => {
-	return ({
-		type: GET_USERS
-	})
 }
 
 export const loadUsers = () => {
@@ -78,15 +81,24 @@ const getUsersFromAPI = () => {
 			.then(users => {
 				let resp = []
 				users.forEach(user => {
-					storage.table("users").add(user)
-						.then(id => {
-							user["id"] = id
+					addUserToIndexedDb(user)
+						.then(user => {
 							resp.push(user)
 							if (resp.length === users.length) {
 								resolve(resp)
 							}
-						}).catch(error => reject(error))
+						}).catch(error => console.error(error))
 				})
+			}).catch(error => reject(error))
+	})
+}
+
+const addUserToIndexedDb = (user) => {
+	return new Promise((resolve, reject) => {
+		storage.table("users").add(user)
+			.then(id => {
+				user["id"] = id
+				resolve(user)
 			}).catch(error => reject(error))
 	})
 }
