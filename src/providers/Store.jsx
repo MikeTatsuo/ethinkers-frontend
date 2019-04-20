@@ -1,9 +1,6 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
-//import { image } from "../reducers/Image.reducer";
-//import { images } from "../reducers/ImagesList.reducer";
 import { users } from "../reducers/Users.reducer";
-//import { category } from "../reducers/Category.reducer";
 
 const allReducers = combineReducers({ users })
 

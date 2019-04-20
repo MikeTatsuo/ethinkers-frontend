@@ -10,15 +10,6 @@ import { loadUsers } from "./actions/Users.action";
 import './App.scss';
 
 class App extends Component {
-  /* constructor(props) {
-    super(props)
-    this.state = {
-      users: []
-    }
-
-    this.loadUsers
-  } */
-
   componentDidMount(){
     this.props.loadUsers();
   }
@@ -35,7 +26,4 @@ class App extends Component {
     );
   }
 }
-/* const mapStateToProps = (state) => ({
-  users: state.users
-}) */
 export default connect(null, { loadUsers })(App);

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import { Navbar, Nav, Image } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
@@ -34,8 +33,4 @@ class NavBar extends Component {
 	}
 }
 
-const mapStateToProps = () => ({
-
-})
-
-export default connect(mapStateToProps)(NavBar);
+export default NavBar;

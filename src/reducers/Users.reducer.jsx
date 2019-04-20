@@ -22,7 +22,6 @@ export const users = (state = initialState, { type, payload }) => {
 		case DELETE_USER:
 			return payload;
 		case LOAD_USERS:
-			debugger
 			return payload;
 		default:
 			return state;

@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 
 class UserData extends Component {
   render() {
-    console.log(this.props.user)
     if (this.props.user) {
       return (
         <Container className="text-left">

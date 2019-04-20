@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import { Row, Container } from "react-bootstrap";
 
 import Imagem from "../components/Imagem/Imagem";
@@ -18,4 +17,4 @@ class Signup extends Component {
 	}
 }
 
-export default connect()(Signup);
+export default Signup;

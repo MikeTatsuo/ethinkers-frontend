@@ -18,11 +18,19 @@ export const editUser = (data) => {
 	})
 }
 
-export const deleteUser = (data) => {
-	return ({
-		type: DELETE_USER,
-		payload: data
-	})
+export const deleteUser = (id) => {
+	return function asyncDel(dispatch) {
+		storage.table("users").delete(id)
+			.then(() => {
+				getUsersFromIndexedDb()
+					.then(users => {
+						dispatch({
+							type: DELETE_USER,
+							payload: users
+						})
+					}).catch(error => console.error(error))
+			}).catch(error => console.error(error))
+	}
 }
 
 export const getUsers = () => {
@@ -32,30 +40,24 @@ export const getUsers = () => {
 }
 
 export const loadUsers = () => {
-	return function asyncAction(dispatch) {
+	return function asyncLoad(dispatch) {
 		getUsersFromIndexedDb()
 			.then(users => {
-				dispatch({
-					type: LOAD_USERS,
-					payload: users
-				});
-			}).catch(() => {
-				userProvider.getUsers()
-					.then(response => {
-						let items = response.map(user => {
-							user["del"] = false;
-							user["edit"] = false;
-							return user
+				if (users.length) {
+					dispatch({
+						type: LOAD_USERS,
+						payload: users
+					});
+				} else {
+					getUsersFromAPI()
+						.then(users => {
+							dispatch({
+								type: LOAD_USERS,
+								payload: users
+							});
 						})
-						storage.table("users").bulkAdd(items)
-							.then(() => {
-								dispatch({
-									type: LOAD_USERS,
-									payload: items
-								});
-							}).catch(error => console.error(error))
-					}).catch(error => console.error(error))
-			})
+				}
+			}).catch(error => console.error(error))
 	}
 }
 
@@ -64,12 +66,27 @@ const getUsersFromIndexedDb = () => {
 		storage.table("users")
 			.toArray()
 			.then(resp => {
-				if (resp.length) {
-					resolve(resp)
-				} else {
-					throw new Error("Ooops! Algo deu errado");
-				}
+				resolve(resp)
 			})
 			.catch(error => reject(error))
+	})
+}
+
+const getUsersFromAPI = () => {
+	return new Promise((resolve, reject) => {
+		userProvider.getUsers()
+			.then(users => {
+				let resp = []
+				users.forEach(user => {
+					storage.table("users").add(user)
+						.then(id => {
+							user["id"] = id
+							resp.push(user)
+							if (resp.length === users.length) {
+								resolve(resp)
+							}
+						}).catch(error => reject(error))
+				})
+			}).catch(error => reject(error))
 	})
 }
