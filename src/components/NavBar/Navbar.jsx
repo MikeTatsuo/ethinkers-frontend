@@ -19,10 +19,10 @@ class NavBar extends Component {
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="mr-auto">
-							<LinkContainer to="/">
+							<LinkContainer to="/ethinkers-frontend">
 								<Nav.Link>Cadastrar</Nav.Link>
 							</LinkContainer>
-							<LinkContainer to="/lista_usuarios">
+							<LinkContainer to="/ethinkers-frontend/lista_usuarios">
 								<Nav.Link>Lista de Usuários</Nav.Link>
 							</LinkContainer>
 						</Nav>
