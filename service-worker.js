@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ethinkers-frontend/precache-manifest.1af3cf62d3d5b9912988e989695c0fad.js"
+  "/ethinkers-frontend/precache-manifest.6ed12cb58205d79e3c2de82d12e04a00.js"
 );
 
 workbox.clientsClaim();
