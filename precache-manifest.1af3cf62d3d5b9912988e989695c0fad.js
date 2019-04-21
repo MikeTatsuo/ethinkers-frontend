@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/ethinkers-frontend/static/js/runtime~main.43288e5f.js"
   },
   {
-    "revision": "731709f73f943fc8e277",
-    "url": "/ethinkers-frontend/static/js/main.672b2ed9.chunk.js"
+    "revision": "3bfc19aca6b76bf828d8",
+    "url": "/ethinkers-frontend/static/js/main.e80592ae.chunk.js"
   },
   {
     "revision": "4b8c10ca571d477772a2",
     "url": "/ethinkers-frontend/static/js/2.120ab268.chunk.js"
   },
   {
-    "revision": "731709f73f943fc8e277",
+    "revision": "3bfc19aca6b76bf828d8",
     "url": "/ethinkers-frontend/static/css/main.e441b07b.chunk.css"
   },
   {
-    "revision": "14ac2ff594c31076c38bdfb2729ef295",
+    "revision": "1cb676f58e7134c0131723c4470bcd91",
     "url": "/ethinkers-frontend/index.html"
   }
 ];
