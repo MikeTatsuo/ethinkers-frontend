@@ -18,16 +18,20 @@ class DeleteButton extends Component {
   }
 
   handleClick() {
+    if (this.state.delete) return;
+
     this.setState({
       delete: true
     }, () => {
-        this.props.deleteUser(this.props.user.id)
+      this.props.deleteUser(this.props.user.id)
     })
   }
 
   render() {
+    const deleteState = this.state.delete ? "danger" : "outline-danger";
+
     return (
-      <Button className="float-right" variant={this.state.delete ? "danger" : "outline-danger"} onClick={!this.state.delete ? this.handleClick : null}>
+      <Button className="float-right" variant={deleteState} onClick={this.handleClick}>
         <FontAwesomeIcon icon={faTrash} />
       </Button>
     )

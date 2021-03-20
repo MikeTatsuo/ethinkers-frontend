@@ -6,7 +6,7 @@ const initialState = [{
 	lastname: "",
 	cpf: "",
 	phone: "",
-	email: ""
+	email: "",
 }]
 
 export const users = (state = initialState, { type, payload }) => {

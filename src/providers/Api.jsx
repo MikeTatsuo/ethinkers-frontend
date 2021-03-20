@@ -7,7 +7,8 @@ export const get = (endpoint, params) => {
     axios.get(`${url}${endpoint}${params ? params : ""}`)
       .then(response => {
         resolve(response);
-      }).catch(error => {
+      })
+      .catch(error => {
         reject(error);
       })
   })

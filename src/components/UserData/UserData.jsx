@@ -28,7 +28,6 @@ class UserData extends Component {
         </Container>
       )
     }
-    return
   }
 }
 

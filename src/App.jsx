@@ -10,7 +10,7 @@ import { loadUsers } from "./actions/Users.action";
 import './App.scss';
 
 class App extends Component {
-  componentDidMount(){
+  componentDidMount() {
     this.props.loadUsers();
   }
 

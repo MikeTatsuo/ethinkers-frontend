@@ -15,8 +15,10 @@ export const addUser = (data) => {
 							type: ADD_USER,
 							payload: users
 						})
-					}).catch(error => console.error(error))
-			}).catch(error => console.error(error))
+					})
+					.catch(error => console.error(error))
+			})
+			.catch(error => console.error(error))
 	}
 }
 
@@ -32,35 +34,38 @@ export const deleteUser = (id) => {
 		storage.table("users").delete(id)
 			.then(() => {
 				getUsersFromIndexedDb()
-					.then(users => {
+					.then(indexedUsers => {
 						dispatch({
 							type: DELETE_USER,
-							payload: users
+							payload: indexedUsers
 						})
-					}).catch(error => console.error(error))
-			}).catch(error => console.error(error))
+					})
+					.catch(error => console.error(error))
+			})
+			.catch(error => console.error(error))
 	}
 }
 
 export const loadUsers = () => {
 	return function asyncLoad(dispatch) {
 		getUsersFromIndexedDb()
-			.then(users => {
-				if (users.length) {
+			.then(usersFromIndexedDb => {
+				if (usersFromIndexedDb.length) {
 					dispatch({
 						type: LOAD_USERS,
-						payload: users
+						payload: usersFromIndexedDb
 					});
 				} else {
 					getUsersFromAPI()
-						.then(users => {
+						.then(usersAPI => {
 							dispatch({
 								type: LOAD_USERS,
-								payload: users
+								payload: usersAPI
 							});
 						})
 				}
-			}).catch(error => console.error(error))
+			})
+			.catch(error => console.error(error))
 	}
 }
 
@@ -79,17 +84,19 @@ const getUsersFromAPI = () => {
 	return new Promise((resolve, reject) => {
 		userProvider.getUsers()
 			.then(users => {
-				let resp = []
+				const resp = []
 				users.forEach(user => {
 					addUserToIndexedDb(user)
-						.then(user => {
-							resp.push(user)
+						.then(addedUser => {
+							resp.push(addedUser)
 							if (resp.length === users.length) {
 								resolve(resp)
 							}
-						}).catch(error => console.error(error))
+						})
+						.catch(error => console.error(error))
 				})
-			}).catch(error => reject(error))
+			})
+			.catch(error => reject(error))
 	})
 }
 
@@ -97,8 +104,9 @@ const addUserToIndexedDb = (user) => {
 	return new Promise((resolve, reject) => {
 		storage.table("users").add(user)
 			.then(id => {
-				user["id"] = id
+				user.id = id
 				resolve(user)
-			}).catch(error => reject(error))
+			})
+			.catch(error => reject(error))
 	})
 }

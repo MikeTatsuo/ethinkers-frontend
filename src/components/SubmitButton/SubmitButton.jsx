@@ -14,6 +14,7 @@ class SubmitButton extends Component {
   handleClick() {
     this.props.addUser(this.props.values);
   }
+
   render() {
     return (
       <Button onClick={this.handleClick} >
