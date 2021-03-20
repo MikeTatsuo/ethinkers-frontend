@@ -1,4 +1,4 @@
-import { ADD_USER, EDIT_USER, DELETE_USER, LOAD_USERS, GET_USERS } from "./ActionTypes";
+import { ADD_USER, EDIT_USER, DELETE_USER, LOAD_USERS } from "./ActionTypes";
 import { storage } from "../providers/Storage";
 import UserProvider from "../providers/Users.provider"
 
