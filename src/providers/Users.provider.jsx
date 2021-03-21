@@ -3,7 +3,7 @@ import * as provider from "./Api";
 const endpoint = "/users";
 
 class UsersProvider {
-  getUsers = () => {
+  getUsers () {
     return new Promise((resolve, reject) => {
       provider.get(endpoint)
         .then(resp => resolve(resp.data))

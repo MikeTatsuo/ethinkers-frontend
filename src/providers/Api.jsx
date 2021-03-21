@@ -1,6 +1,6 @@
 import * as axios from "axios";
 
-const url = "https://private-5e3134-ethinkers.apiary-mock.com";
+const url = "https://private-a58dd5-useraddlist.apiary-mock.com/";
 
 export const get = (endpoint, params) => {
   return new Promise((resolve, reject) => {

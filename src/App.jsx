@@ -19,8 +19,8 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <Switch>
-          <Route exact path="/ethinkers-frontend/" component={Signup} />
-          <Route path="/ethinkers-frontend/lista_usuarios/" component={Users} />
+          <Route exact path="/addlistusers/" component={Signup} />
+          <Route path="/addlistusers/lista_usuarios/" component={Users} />
         </Switch>
       </div>
     );

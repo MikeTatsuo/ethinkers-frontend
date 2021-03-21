@@ -4,8 +4,8 @@ const initialState = [{
 	id: 0,
 	firstname: "",
 	lastname: "",
-	cpf: "",
-	phone: "",
+	cpf: 0,
+	phone: 0,
 	email: "",
 }]
 

@@ -84,8 +84,9 @@ const getUsersFromAPI = () => {
 	return new Promise((resolve, reject) => {
 		userProvider.getUsers()
 			.then(users => {
+        console.log(users);
 				const resp = []
-				users.forEach(user => {
+				Array(users).forEach(user => {
 					addUserToIndexedDb(user)
 						.then(addedUser => {
 							resp.push(addedUser)

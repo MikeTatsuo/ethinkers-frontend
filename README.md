@@ -7,7 +7,7 @@ Baixar o projeto usando git clone ou baixando diretamente o arquivo ```.zip```
 
 Comando do git clone
 ```shell
-git clone https://github.com/MikeTatsuo/ethinkers-frontend
+git clone https://github.com/MikeTatsuo/addlistusers
 ```
 
 Ele irá baixar os arquivos do projeto em uma pasta com o mesmo nome.
@@ -15,7 +15,7 @@ Ele irá baixar os arquivos do projeto em uma pasta com o mesmo nome.
 Entrar dentro da pasta.
 
 ```shell
-cd ./ethinkers-frontend
+cd ./addlistusers
 ```
 
 E para construir o projeto executar o comando
